@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Center Google Results",
+  "version": "1.0",
+  "description": "Centers the main column of Google Search results.",
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/search*"],
+      "css": ["styles.css"]
+    }
+  ]
+}
