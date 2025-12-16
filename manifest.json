@@ -5,7 +5,11 @@
   "description": "Centers the main column of Google Search results.",
   "content_scripts": [
     {
-      "matches": ["*://www.google.com/search*"],
+      "matches": [
+        "*://www.google.com/search*",
+        "*://kubernetes.io/docs*",
+        "*://isocpp.github.io/*"
+      ],
       "css": ["styles.css"]
     }
   ]

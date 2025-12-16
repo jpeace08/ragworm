@@ -38,3 +38,17 @@
   align-items: center;
   justify-content: space-around;
 }
+
+
+/* Center k8s docs */
+.td-main main[role="main"] {
+  width: 75%;
+  margin: auto;
+}
+
+
+/* Hide about isocpp */
+
+.sidebar-about {
+  display: none;
+}
