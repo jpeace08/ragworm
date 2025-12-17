@@ -17,6 +17,13 @@
         "*://isocpp.github.io/*"
       ],
       "css": ["isocpp.css"]
+    },
+    {
+      "matches": [
+        "*://en.cppreference.com/*"
+      ],
+      "css": ["cppref.css"]
     }
+
   ]
 }

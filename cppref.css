@@ -1,0 +1,74 @@
+div#cpp-head-first-base {
+    border-bottom: 1px solid #1c1c1d !important;
+    background: #1c1c1d !important;
+}
+
+div#cpp-content-base {
+  background-color: #1c1c1d !important;
+}
+
+div#cpp-head-second-base {
+  background-image: none !important;
+  background-color: #1c1c1d !important;
+}
+
+div#content {
+  color: #b0b3b8 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #b0b3b8 !important;
+}
+
+a {
+  color: #578ee9 !important;
+}
+
+a:visited {
+  color: #645cbf !important;
+}
+
+.t-c {
+  border: 1px solid #636363 !important;
+}
+
+.cpp.source-cpp .kw1 {
+  color: #9b6e2b !important;
+}
+
+.cpp.source-cpp .sy1 {
+  color: #674000 !important;
+}
+
+.cpp.source-cpp .sy3 {
+  color: #664a00 !important;
+}
+
+.cpp.source-cpp .kw4 {
+  color: #ffb200 !important;
+}
+
+.cpp.source-cpp .kw2 {
+  color: #ff7e00 !important;
+}
+
+.t-rev > td {
+  border-color: #636363 !important; 
+}
+
+.t-rev-inl {
+  border-color: #636363 !important;
+}
+
+.t-dcl > td, .t-dcl-h > td, .t-dcl-sep > td, .t-dcl-rev > .t-dcl:first-child > td, .t-dcl-rev > .t-dcl-rev-aux > td {
+  border-top: 1px solid #565656 !important;
+}
+
+pre, div.mw-geshi {
+  background-color: #2b2b29 !important;
+  border: 1px solid #1c1c1d !important;
+}
+
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {
+  border: none !important;
+}
