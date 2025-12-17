@@ -11,6 +11,12 @@
         "*://isocpp.github.io/*"
       ],
       "css": ["styles.css"]
+    },
+    {
+      "matches": [
+        "*://isocpp.github.io/*"
+      ],
+      "css": ["isocpp.css"]
     }
   ]
 }
