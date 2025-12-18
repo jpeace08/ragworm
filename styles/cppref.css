@@ -72,3 +72,7 @@ pre, div.mw-geshi {
 .cpp.source-cpp .de1, .cpp.source-cpp .de2 {
   border: none !important;
 }
+
+#carbonads {
+  display: none !important;
+}

@@ -10,19 +10,19 @@
         "*://kubernetes.io/docs*",
         "*://isocpp.github.io/*"
       ],
-      "css": ["styles.css"]
+      "css": ["styles/styles.css"]
     },
     {
       "matches": [
         "*://isocpp.github.io/*"
       ],
-      "css": ["isocpp.css"]
+      "css": ["styles/isocpp.css"]
     },
     {
       "matches": [
         "*://en.cppreference.com/*"
       ],
-      "css": ["cppref.css"]
+      "css": ["styles/cppref.css"]
     }
 
   ]
