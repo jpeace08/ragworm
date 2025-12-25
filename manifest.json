@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Surprise tools",
+  "name": "Ragworm",
   "version": "1.0",
-  "description": "Hehehehe",
+  "description": "Happy box",
   "permissions": ["tabs", "scripting"],
   "background": {
     "service_worker": "js/background.js"
