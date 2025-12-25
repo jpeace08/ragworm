@@ -1,8 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Center Google Results",
+  "name": "Surprise tools",
   "version": "1.0",
-  "description": "Centers the main column of Google Search results.",
+  "description": "Hehehehe",
+  "permissions": ["tabs", "scripting"],
+  "background": {
+    "service_worker": "js/background.js"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -23,6 +27,12 @@
         "*://en.cppreference.com/*"
       ],
       "css": ["styles/cppref.css"]
+    },
+    {
+      "matches": ["*://*/*"],
+      "js": ["js/vim.js"],
+      "run_at": "document_end",
+      "all_frames": true
     }
 
   ]
