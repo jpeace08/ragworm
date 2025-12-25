@@ -31,6 +31,7 @@
     {
       "matches": ["*://*/*"],
       "js": ["js/vim.js"],
+      "css": ["styles/vim.css"],
       "run_at": "document_end",
       "all_frames": true
     }

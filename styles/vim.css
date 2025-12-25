@@ -1,0 +1,16 @@
+.vim-indicator {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    padding: 4px 12px;
+    background-color: rgba(0, 0, 0, 0.85);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 2px;
+    z-index: 2147483647; /* Giá trị z-index tối đa */
+    pointer-events: none;
+    border-left: 4px solid;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+}

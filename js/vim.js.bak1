@@ -1,67 +1,63 @@
-let isEnabled = true; // Trạng thái mặc định là BẬT
+// --- 1. QUẢN LÝ VỊ TRÍ CHUỘT ---
 let mouseX = 0;
 let mouseY = 0;
 
-// Theo dõi vị trí chuột
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 });
 
-// Hàm tìm phần tử cuộn chuẩn xác
+// --- 2. LOGIC TÌM PHẦN TỬ CUỘN (Hỗ trợ mức n) ---
 function isScrollable(el) {
     if (!el) return false;
     const style = window.getComputedStyle(el);
     const overflowY = style.getPropertyValue('overflow-y');
-    const hasScrollStyle = ['auto', 'scroll'].includes(overflowY);
+    const overflow = style.getPropertyValue('overflow');
+    
+    const hasScrollStyle = [overflow, overflowY].some(s => s === 'auto' || s === 'scroll');
     const canScroll = el.scrollHeight > el.clientHeight;
+    
     return canScroll && hasScrollStyle;
 }
 
 function getBestScrollElement() {
+    // Tìm phần tử ngay dưới con trỏ chuột
     let el = document.elementFromPoint(mouseX, mouseY);
+
+    // Leo ngược lên trên để tìm thẻ đầu tiên có khả năng cuộn
     while (el) {
         if (isScrollable(el)) return el;
         el = el.parentElement;
     }
+
+    // Nếu không tìm thấy quanh chuột, dùng scrollingElement (thường là html/body)
     return document.scrollingElement || document.documentElement;
 }
 
-// Tạo Indicator và cập nhật màu sắc theo trạng thái
-function updateIndicator() {
-    let indicator = document.querySelector('.vim-indicator');
-    if (!indicator) {
-        indicator = document.createElement('div');
-        indicator.className = 'vim-indicator';
-        document.body.appendChild(indicator);
-    }
-    
-    if (isEnabled) {
-        indicator.innerText = '-- VIM MODE --';
-        indicator.style.borderColor = '#00ff00';
-        indicator.style.color = '#00ff00';
-    } else {
-        indicator.innerText = '-- DISABLED --';
-        indicator.style.borderColor = '#ff4444';
-        indicator.style.color = '#ff4444';
-    }
+// --- 3. HIỂN THỊ VIM INDICATOR ---
+function createVimIndicator() {
+    if (document.querySelector('.vim-indicator')) return;
+    const indicator = document.createElement('div');
+    indicator.className = 'vim-indicator';
+    indicator.innerText = '-- VIM MODE --';
+    document.body.appendChild(indicator);
 }
 
-// --- XỬ LÝ PHÍM TẮT ---
+// Chạy khi trang sẵn sàng
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    createVimIndicator();
+} else {
+    document.addEventListener('DOMContentLoaded', createVimIndicator);
+}
+
+// --- 4. XỬ LÝ SỰ KIỆN BÀN PHÍM ---
 let keyBuffer = "";
 let bufferTimeout;
 
-document.addEventListener("keydown", function(event) {
-    // 1. Phím nóng để Bật/Tắt: Alt + v
-    if (event.altKey && event.key.toLowerCase() === 'v') {
-        isEnabled = !isEnabled;
-        updateIndicator();
-        return;
-    }
+console.log("Vim script loaded with Smart Scroll");
 
-    // 2. Nếu đang tắt hoặc đang nhập liệu thì không làm gì cả
-    if (!isEnabled) return;
-    
+document.addEventListener("keydown", function(event) {
+    // Bỏ qua nếu đang nhập liệu
     const target = event.target;
     if (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable) {
         return;
@@ -69,8 +65,9 @@ document.addEventListener("keydown", function(event) {
 
     const key = event.key;
     const scrollEl = getBestScrollElement();
-    const step = 80;
+    const step = 60; // Khoảng cách cuộn mỗi lần nhấn
 
+    // Xử lý phím
     switch (key) {
         case "j":
             scrollEl.scrollBy({ top: step, behavior: "smooth" });
@@ -92,14 +89,8 @@ document.addEventListener("keydown", function(event) {
         scrollEl.scrollTo({ top: 0, behavior: "smooth" });
         keyBuffer = "";
     }
+
     clearTimeout(bufferTimeout);
     bufferTimeout = setTimeout(() => { keyBuffer = ""; }, 500);
 
-}, true);
-
-// Khởi tạo indicator khi load trang
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', updateIndicator);
-} else {
-    updateIndicator();
-}
+}, true); // Bắt sự kiện ở Capture phase để giành quyền ưu tiên
