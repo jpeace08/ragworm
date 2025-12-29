@@ -60,7 +60,12 @@ a:visited {
   border-color: #636363 !important;
 }
 
-.t-dcl > td, .t-dcl-h > td, .t-dcl-sep > td, .t-dcl-rev > .t-dcl:first-child > td, .t-dcl-rev > .t-dcl-rev-aux > td {
+.t-dcl > td,
+.t-dcl-h > td,
+.t-dcl-sep > td,
+.t-dcl-rev > .t-dcl:first-child > td,
+.t-dcl-rev > .t-dcl-rev-aux > td,
+.t-dsc > td {
   border-top: 1px solid #565656 !important;
 }
 
