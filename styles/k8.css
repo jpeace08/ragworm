@@ -13,6 +13,26 @@ h3 {
   font-weight: 700 !important;
 }
 
-:is(h1, h2, h3, h4) .immersive-translate-target-wrapper {
+:is(h1, h2, h3, h4, h5) .immersive-translate-target-wrapper {
+  display: none !important;
+}
+
+.navbar-brand {
+  display: none !important;
+}
+
+div[id="main_navbar"] .immersive-translate-target-wrapper {
+  display: none !important;
+}
+
+div[id="sidebarnav"] .immersive-translate-target-wrapper {
+  display: none !important;
+}
+
+nav[aria-label="breadcrumb"] .immersive-translate-target-wrapper {
+  display: none !important;
+}
+
+div[id="td-sidebar-menu"] .immersive-translate-target-wrapper {
   display: none !important;
 }

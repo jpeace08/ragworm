@@ -12,6 +12,7 @@
       "matches": [
         "*://www.google.com/search*",
         "*://kubernetes.io/docs*",
+        "*://kubernetes.io/blog*",
         "*://isocpp.github.io/*",
         "*://gemini.google.com/*"
       ],
@@ -19,7 +20,8 @@
     },
     {
       "matches": [
-        "*://kubernetes.io/docs*"
+        "*://kubernetes.io/docs*",
+        "*://kubernetes.io/blog*"
       ],
       "css": ["styles/k8.css"]
     },
