@@ -12,7 +12,8 @@
       "matches": [
         "*://www.google.com/search*",
         "*://kubernetes.io/docs*",
-        "*://isocpp.github.io/*"
+        "*://isocpp.github.io/*",
+        "*://gemini.google.com/*"
       ],
       "css": ["styles/styles.css"]
     },
@@ -21,17 +22,6 @@
         "*://isocpp.github.io/*"
       ],
       "css": ["styles/isocpp.css"]
-    },
-    {
-      "matches": [
-        "*://gemini.google.com/*"
-      ],
-      "css": ["styles/styles.css"]
-    },
-    {
-      "matches": [
-        "*://en.cppreference.com/*"
-      ]
     },
     {
       "matches": ["*://*/*"],
