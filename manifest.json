@@ -30,8 +30,7 @@
       "css": ["styles/isocpp.css"]
     },
     {
-      "matches": ["*://en.cppreference.com/*"],
-      "css": ["styles/cppref.css"]
+      "matches": ["*://en.cppreference.com/*"]
     },
     {
       "matches": ["*://*/*"],
