@@ -24,6 +24,13 @@
       "css": ["styles/isocpp.css"]
     },
     {
+      "matches": [
+        "*://kubernetes.io/docs*"
+      ],
+      "css": ["styles/k8.css"]
+    },
+
+    {
       "matches": ["*://*/*"],
       "js": ["js/vim.js"],
       "css": ["styles/vim.css"],

@@ -101,5 +101,5 @@ document.addEventListener("keydown", function(event) {
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', updateIndicator);
 } else {
-    updateIndicator();
+    // updateIndicator();
 }

@@ -1,0 +1,18 @@
+h1 {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+}
+
+h3 {
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+}
+
+:is(h1, h2, h3, h4) .immersive-translate-target-wrapper {
+  display: none !important;
+}
