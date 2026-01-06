@@ -42,7 +42,8 @@
 
 /* Center k8s docs */
 .td-main main[role="main"] {
-  width: 75%;
+  width: 100% !important;
+  max-width: 100% !important;
   margin: auto;
 }
 
@@ -56,6 +57,11 @@
 
 .td-content {
   width: 70% !important;
+}
+
+.td-main .td-content {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .conversation-container {
