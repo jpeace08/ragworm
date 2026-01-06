@@ -19,12 +19,6 @@
     },
     {
       "matches": [
-        "*://isocpp.github.io/*"
-      ],
-      "css": ["styles/isocpp.css"]
-    },
-    {
-      "matches": [
         "*://kubernetes.io/docs*"
       ],
       "css": ["styles/k8.css"]
