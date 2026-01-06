@@ -67,3 +67,8 @@
 .conversation-container {
   min-width: 1000px !important;
 }
+
+
+[imt-state="dual"] .immersive-translate-target-translation-block-wrapper-theme-background {
+  background-color: #fbf5f582 !important;
+}
