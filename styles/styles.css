@@ -57,3 +57,7 @@
 .td-content {
   width: 70% !important;
 }
+
+.conversation-container {
+  min-width: 1000px !important;
+}

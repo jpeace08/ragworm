@@ -24,9 +24,14 @@
     },
     {
       "matches": [
-        "*://en.cppreference.com/*"
+        "*://gemini.google.com/*"
       ],
-      "css": ["styles/cppref.css"]
+      "css": ["styles/styles.css"]
+    },
+    {
+      "matches": [
+        "*://en.cppreference.com/*"
+      ]
     },
     {
       "matches": ["*://*/*"],
