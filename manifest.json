@@ -25,7 +25,12 @@
       ],
       "css": ["styles/k8.css"]
     },
-
+    {
+      "matches": [
+        "*://docs.vngcloud.vn/*"
+      ],
+      "css": ["styles/vng.css"]
+    },
     {
       "matches": ["*://*/*"],
       "js": ["js/vim.js"],
