@@ -36,3 +36,7 @@ nav[aria-label="breadcrumb"] .immersive-translate-target-wrapper {
 div[id="td-sidebar-menu"] .immersive-translate-target-wrapper {
   display: none !important;
 }
+
+table .immersive-translate-target-wrapper {
+  display: none !important;
+}
