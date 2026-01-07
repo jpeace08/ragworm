@@ -40,3 +40,7 @@ div[id="td-sidebar-menu"] .immersive-translate-target-wrapper {
 table .immersive-translate-target-wrapper {
   display: none !important;
 }
+
+main[role="main"] p {
+  max-width: 100% !important;
+}
