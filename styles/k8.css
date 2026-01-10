@@ -41,6 +41,10 @@ table .immersive-translate-target-wrapper {
   display: none !important;
 }
 
+a > font.immersive-translate-target-wrapper {
+  display: none !important;
+}
+
 main[role="main"] p {
   max-width: 100% !important;
 }
